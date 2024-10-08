@@ -91,7 +91,7 @@ def add_planet(planet_id):
     
     return jsonify(response_body), 200
 
-@app.route('/planets/<int:people_id>', methods=['POST'])
+@app.route('/characters/<int:people_id>', methods=['POST'])
 def add_character(people_id):
     body = request.get_json()
     favorite = FavoritesCharacters(user_id = body['user_id'], favorite_character = body['favorite_character'])
