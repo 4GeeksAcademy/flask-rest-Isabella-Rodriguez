@@ -110,7 +110,7 @@ def get_favorites(id_user):
     favorites_planets = FavoritesPlanets.query.filter_by(user_id=id_user)
     planets = list(map(lambda item: item.serialize(), favorites_planets)) 
 
-    favorites_characters = favorites_characters.query.filter_by(user_id=id_user)
+    favorites_characters = FavoritesCharacters.query.filter_by(user_id=id_user)
     characters = list(map(lambda item: item.serialize(), favorites_characters))
 
     result = {
